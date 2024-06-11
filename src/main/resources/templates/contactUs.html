@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact to School</title>
+<!--    <link rel="stylesheet"-->
+<!--          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"-->
+<!--          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"-->
+<!--          crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-image: url('/images/school3.jpg');
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav button {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav button:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav button:default {
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+    <style>
+        .contact_heading{
+            width: 350px;
+            float: right;
+        }
+    </style>
+
+<!--    <style>-->
+<!--        i.size {-->
+<!--            font-size: 20px;-->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+<div class="topnav">
+    <!--    <span th:text= "${feeMsg}" th:remove="tag"></span>-->
+    <!--    <span th:text= "${msg1}" th:remove="tag"></span>-->
+    <!--    <span th:text= "${msg}" th:remove="tag">userName</span>-->
+    <form method="POST" th:action="@{/profile/{msg}(msg= ${msg})}" >
+        <button type="submit" name="Profile" value="Profile" class="btn btn-primary btn-sm mb-3" >Profile</button>
+    </form>
+    <form method="POST" th:action="@{/home/{msg}(msg= ${msg})}" >
+        <button type="submit" name="Home" value="Home" class="btn btn-primary btn-sm mb-3" >Home</button>
+    </form>
+    <form method="POST" th:action="@{/feeDetails/{msg}(msg= ${msg})}" >
+        <button type="submit" name="FeeDetails" value="FeeDetails" class="btn btn-primary btn-sm mb-3" >FeeDetails</button>
+    </form>
+    <form method="POST" th:action="@{/contactUs/{msg}(msg= ${msg})}" >
+        <button type="submit" name="ContactUs" value="ContactUs" class="btn btn-primary btn-sm mb-3" >Contact</button>
+    </form>
+    <form method="post" th:action="@{/formInfo/{msg}(msg= ${msg})}">
+        <button type="submit" name="formInfo" value="formInfo" class="btn btn-primary btn-sm mb-3" >FormInfo</button>
+    </form>
+
+</div>
+
+<div class="contact_heading">
+    <h1>CONTACT INFO</h1>
+    <p style="font-size: 20px;color: dimgray ;">
+    <b>Explore the way to Excelence School
+    We are here to provide you the best
+    education and answer any query you
+    may have for all your educational needs.</b>
+    </p>
+    <i class="fa fa-home" style="font-size:24px"></i>
+    <b style="font-size: 20px;color: dimgray">
+        Flat No.415, B-Block, Eden-Garden,
+        Capstown, Raw, Indore.
+        pincode-453331
+    </b>
+    <br>
+    <br>
+    <i class="fa fa-phone" style="font-size:24px"></i>
+    <a href="tel:08585021791" style="font-size: 20px;color: dimgray ;">
+        08585021791</a>
+    <b style="font-size: 20px;color: dimgray">(Academic)</b>
+    <br>
+    <br>
+    <i class="fa fa-phone" style="font-size:24px"></i>
+    <a href="tel:09148775896" style="font-size: 20px;color: dimgray ;">
+        09148775896</a>
+    <b style="font-size: 20px;color: dimgray">(Principal)</b>
+    <br>
+    <br>
+    <i class="fa fa-phone" style="font-size:24px"></i>
+    <a href="tel:06266176012" style="font-size: 20px;color: dimgray ;">
+        06266176012</a>
+    <b style="font-size: 20px;color: dimgray">(Admission)</b>
+</div>
+
+
+
+<!--<div class="container my-2" align="center">-->
+<!--    <span th:text= "${feeMsg}" th:remove="tag"></span>-->
+<!--    <span th:text= "${msg1}" th:remove="tag"></span>-->
+<!--    <span th:text= "${msg}" th:remove="tag">userName</span>-->
+<!--    <hr>-->
+<!--    <form method="POST" th:action="@{/profile/{msg}(msg= ${msg})}" >-->
+<!--        <button type="submit" name="Profile" value="Profile" class="btn btn-primary btn-sm mb-3" >Profile</button>-->
+<!--    </form>-->
+<!--    <form method="POST" th:action="@{/home/{msg}(msg= ${msg})}" >-->
+<!--        <button type="submit" name="Home" value="Home" class="btn btn-primary btn-sm mb-3" >Home</button>-->
+<!--    </form>-->
+<!--    <form method="POST" th:action="@{/feeDetails/{msg}(msg= ${msg})}" >-->
+<!--        <button type="submit" name="FeeDetails" value="FeeDetails" class="btn btn-primary btn-sm mb-3" >FeeDetails</button>-->
+<!--    </form>-->
+<!--    </form>-->
+<!--    <form method="POST" th:action="@{/contactUs/{msg}(msg= ${msg})}" >-->
+<!--        <button type="submit" name="ContactUs" value="ContactUs" class="btn btn-primary btn-sm mb-3" >Contact Us</button>-->
+<!--    </form>-->
+<!--</div>-->
+<!-- <div class="container my-2" align="left">-->
+<!--    <h2>CONTACT US</h2>-->
+<!--     <p>-->
+<!--         <pre>-->
+<!--      Explore the way to Excelence School.-->
+<!--      We are here to provide you The Best-->
+<!--      Education for Future.-->
+<!-- </pre>-->
+<!--     </p>-->
+<!-- </div>-->
+
+<!--<div class="container my-2" align="right">-->
+<!--    <h2>CONTACT INFO</h2>-->
+<!--    <br>-->
+<!--   <a th:href="@{/contact}">-->
+<!--       <i class="fas fa envelope"></i>contact us-->
+<!--   </a>-->
+
+<!--</div>-->
+
+</body>
+</html>

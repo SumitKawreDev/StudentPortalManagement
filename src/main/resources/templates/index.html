@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>StudentPortl</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container my-2" align="center">
+
+    <h3 style="color: aqua">Welcome to Student Portal</h3>
+    <span th:text="${massage}" th:remove="tag"></span>
+    <hr>
+    <a th:href="@{/login}" class="btn btn-primary btn-sm mb-3" >Click to Login</a>
+    <a th:href="@{/register}" class="btn btn-primary btn-sm mb-3" >Click to Register</a>
+
+</div>
+</body>
+</html>

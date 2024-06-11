@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Save Fee</title>
+</head>
+<body>
+<form role="form" method="post" th:action="@{/saveFee/{studentId}(studentId= ${studentId})}" th:object="${fee}">
+
+<!--    <label>feeId:<input type="text" th:field = "*{feeId}" /></label>-->
+    <label>monthName:<input type="text" required th:field = "*{monthName}" /></label>
+    <label>monthFee:<input type="number" required th:field = "*{monthFee}" /></label>
+    <label>paidFee:<input type="number" required th:field = "*{paidFee}" /></label>
+    <label>feeStatus:<input type="text" required th:field = "*{feeStatus}" /></label>
+    <label>feePaidDate:<input type="text" required th:field = "*{feePaidDate}" /></label>
+    <button type="submit">save</button>
+</form>
+
+</body>
+</html>

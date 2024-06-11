@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Salary Update Page</title>
+</head>
+<body>
+<form role="form" method="post" th:action="@{/UpdateStaffSalary/{staffId}/{salaryId} (staffId= ${staffId},salaryId= ${salaryId})}" th:object="${salary}">
+
+    <label>monthName:<input type="text"  th:field = "*{monthName}" /></label>
+    <label>monthSalary:<input type="number"  th:field = "*{monthSalary}" /></label>
+    <label>paidSalary:<input type="number"  th:field = "*{paidSalary}" /></label>
+    <label>remainingSalary:<input type="number"  th:field = "*{remainingSalary}" /></label>
+    <label>salaryPaidDate:<input type="date"  th:field = "*{salaryPaidDate}" /></label>
+    <label>salaryStatus:<input type="text"  th:field = "*{salaryStatus}" /></label>
+    <label>descriptionBox:<input type="text"  th:field = "*{descriptionBox}" /></label>
+    <button type="submit">Update</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Staff Salary Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-image: url('/images/school3.jpg');
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav button {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav button:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav button:default {
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+    <style>
+        .logout button {
+            float: right;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="topnav">
+    <form role="form" method="post" th:action="@{/teachingSchedule/{msg}(msg= ${msg})}">
+        <button type="submit" name="teachingSchedule" value="teachingSchedule" class="btn btn-primary btn-sm mb-3" >Home</button>
+    </form>
+    <form role="form" method="post" th:action="@{/staffProfile/{msg}(msg= ${msg})}">
+        <button type="submit" name="staffProfile" value="staffProfile" class="btn btn-primary btn-sm mb-3" >Profile</button>
+    </form>
+    <form role="form" method="post" th:action="@{/staffSalary/{msg}(msg= ${msg})}">
+        <button type="submit" name="staffSalary" value="staffSalary" class="btn btn-primary btn-sm mb-3" >Salary</button>
+    </form>
+</div>
+<table style="width:100%" border="1" align="center"
+       class = "table table-striped table-responsive-md">
+    <thead>
+    <br><br>
+    <tr>
+        <th>Salary Id</th>
+        <th>Total Salary</th>
+        <th>Paid Salary</th>
+        <th>Remaining Salary</th>
+        <th>Salary Status</th>
+        <th>Salary PaidDate</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${salary.salaryId}"></td>
+        <td th:text="${salary.totalSalary}"></td>
+        <td th:text="${salary.paidSalary}"></td>
+        <td th:text="${salary.remainingSalary}"></td>
+        <td th:text="${salary.salaryStatus}"></td>
+        <td th:text="${salary.salaryPaidDate}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

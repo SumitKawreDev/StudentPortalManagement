@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Student</title>
+</head>
+<body>
+<div class="container">
+    <h1>Student Login Portal</h1>
+    <hr>
+    <form role="form" method="post" th:action="@{/login}" th:object="${loginDetails}">
+
+        <label>Username:<input type="text" th:field = "*{userName}" required/></label>
+        <label>Password:<input type="text" th:field = "*{stdPassword}" required/></label>
+        <button type="submit">Login</button>
+    </form>
+
+</div>
+</body>
+</html>

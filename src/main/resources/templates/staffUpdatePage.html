@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Staff Update Page</title>
+</head>
+<body>
+<form role="form" method="post" th:action="@{/updateStaffInfo/{staffId}(staffId= ${staffId})}" th:object="${staff}">
+
+    <label>staffName:<input type="text"  th:field = "*{staffName}" /></label>
+    <label>address:<input type="text"  th:field = "*{address}" /></label>
+    <label>email:<input type="email"  th:field = "*{email}" /></label>
+    <label>contactNumber:<input type="number"  th:field = "*{contactNumber}" /></label>
+    <label>dateOfBirth:<input type="date"  th:field = "*{dateOfBirth}" /></label>
+    <label>gender:<input type="text"  th:field = "*{gender}" /></label>
+    <label>staffStatus:<input type="text"  th:field = "*{staffStatus}" /></label>
+    <label>staffRole:<input type="text"  th:field = "*{staffRole}" /></label>
+    <button type="submit">Update</button>
+</form>
+</body>
+</html>

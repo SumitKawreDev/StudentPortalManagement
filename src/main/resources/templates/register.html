@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Resister New Student</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registration Portal</h1>
+        <hr>
+        <form role="form" method="post" th:action="@{/save}" th:object="${student}">
+
+            <label>Username:<input type="text" th:field = "*{userName}" /></label>
+            <label>Password:<input type="text" th:field = "*{stdPassword}" /></label>
+            <label>StudentId:<input type="number" th:field = "*{studentId}" /></label>
+            <label>StudentName:<input type="text" th:field = "*{studentName}" /></label>
+            <label>FatherName:<input type="text" th:field = "*{fatherName}" /></label>
+            <label>MotherName:<input type="text" th:field = "*{motherName}" /></label>
+            <label>DateOfBirth:<input type="date" th:field = "*{dateOfBirth}" /></label>
+            <label>Email:<input type="email" th:field = "*{email}" /></label>
+            <label>Gender:<input type="text" th:field = "*{gender}" /></label>
+            <label>ContactNumber:<input type="number" th:field = "*{contactNumber}" /></label>
+            <label>Category:<input type="text" th:field = "*{category}" /></label>
+            <label>FatherOccupation:<input type="text" th:field = "*{fatherOccupation}" /></label>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
